@@ -3,7 +3,7 @@ Data analysis and ML-based dashboard for BMTC route prediction using Python and 
 
 ## 📁 Contents
 
-- `BMTC_Route_Prediction.ipynb`: Jupyter notebook with full data cleaning, feature engineering, model training, and export steps.
+- `BMTC_Route_Prediction.ipynb`: Jupyter notebook with full data cleaning, feature engineering, model training, and export steps. https://github.com/Rimpa1999/BMTC-Bus-Route-Analysis-Prediction-Dashboard/blob/main/BMTC_Route_Prediction.ipynb
 - `final_routes_data.csv`: Cleaned and enriched dataset used in Power BI.
 - `BMTC_Dashboard.pbix`: Interactive Power BI dashboard with insights. [(https://github.com/Rimpa1999/BMTC-Bus-Route-Analysis-Prediction-Dashboard/blob/main/BMTC_Route_Analysis.pbix)] 
 - `routes.csv`, `stops.csv`, `stop_times.csv`, `trips.csv`: Raw BMTC GTFS datasets.
