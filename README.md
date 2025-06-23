@@ -9,7 +9,7 @@ Data analysis and ML-based dashboard for BMTC route prediction using Python and 
 - `routes.csv`, `stops.csv`, `stop_times.csv`, `trips.csv`: Raw BMTC GTFS datasets.
   ## 📍 Data Source
 
-Data is publicly available from the Kaggle: https://www.kaggle.com/datasets/shivamishra2112/bmtc-bus-transportation-dataset  
+Data is publicly available from the Kaggle:https://github.com/Rimpa1999/BMTC-Bus-Route-Analysis-Prediction-Dashboard/blob/main/bmtc_route_prediction_powerbi.py   
 
 ## 🔍 Features
 
