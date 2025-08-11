@@ -1,5 +1,6 @@
-# BMTC-Bus-Route-Analysis-Prediction-Dashboard
-Data analysis and ML-based dashboard for BMTC route prediction using Python and Power BI.
+## 📁 Overview
+This project analyzes Bangalore Metropolitan Transport Corporation (BMTC) bus route data to classify routes into predefined categories (Ordinary, Express, AC, etc.) and generate operational insights for route optimization and fleet management.
+The solution integrates data cleaning, machine learning classification, and Power BI visualization to provide transport planners with actionable, data-backed recommendations.
 
 ## 📁 Contents
 
@@ -10,56 +11,105 @@ Data analysis and ML-based dashboard for BMTC route prediction using Python and 
   ## 📍 Data Source
 
 Data is publicly available from the Kaggle:https://github.com/Rimpa1999/BMTC-Bus-Route-Analysis-Prediction-Dashboard/blob/main/bmtc_route_prediction_powerbi.py   
+routes.txt – route IDs, short names, long names, route type.
+trips.txt – trip IDs, route IDs, service IDs.
+stops.txt – stop IDs, names, locations.
+stop_times.txt – stop sequences, arrival/departure times.
+ 
+  ## Business Problem
+BMTC’s planning team lacked a centralized system to:
+Classify routes based on service characteristics.
+Identify underperforming or overlapping routes.
+Make data-driven decisions on fleet allocation and scheduling.
+This project delivers an end-to-end analytical solution to address these needs.
 
-## 🔍 Features
+  ## Objectives
+Merge multiple GTFS datasets (stops, trips, routes, schedules) into a clean, unified dataset.
+Engineer features such as total stops, trip frequency, average trip time.
+Build and evaluate machine learning models for route classification.
+Develop a Power BI dashboard for decision-makers to explore operational KPIs.
 
-- Trip duration calculation, stop analysis
-- ML model to predict route types using `route_name_length`, `is_urban`, `trip_duration`, `num_stops`
-- Clean, interactive Power BI dashboard
-- Slicers for route type, urban filter, number of stops
+  ## Tech Stack
+Languages: Python, SQL
+Libraries: Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn
+Visualization: Power BI
+Data Handling: CSV/GTFS format processing in Pandas
 
-## 💡 Tools Used
+ ## Workflow
+flowchart LR
+A[Import GTFS datasets] --> B[Data Cleaning & Merging]
+B --> C[Feature Engineering]
+C --> D[EDA & Visualization]
+D --> E[Model Training & Evaluation]
+E --> F[Export Predictions]
+F --> G[Power BI Dashboard]
 
-- Python (pandas, scikit-learn, seaborn)
-- Jupyter Notebook
-- Power BI
-- GitHub
-- 
-## 🤝 How This Project Helps Others
-- **💼 Data Analysts & Beginners**  
-  Learn end-to-end data science pipeline using real-world transit data.
+ ## Approach
+** 1. Data Preparation**
+Imported GTFS data files.
+Removed duplicates and handled missing values.
+Converted time columns to datetime format.
+Engineered additional features:
+Number of stops per route.
+Average trip duration.
+Service frequency.
 
-- **🚍 Public Transit Authorities**  
-  Gain insights into route efficiency and service distribution.
+**2. Exploratory Data Analysis (EDA)**
+Distribution of routes by type.
 
-- **📊 Educators & Students**  
-  Use as a capstone project or teaching module for analytics courses.
+Correlation between route length and trip time.
 
-- **🏙️ Smart City Planners**  
-  Integrate with broader urban planning initiatives and smart mobility systems.
+Stop density heatmaps.
 
-- **🧠 AI/ML Researchers**  
-  Extend for optimization, reinforcement learning, or real-time routing problems.
+**3. Model Building**
+Tested models: Logistic Regression, Random Forest, SVM.
 
-  ## 🔮 Future Recommendations
+Random Forest performed best:
 
-To further improve and expand the BMTC Route Analysis project, the following recommendations are proposed:
+Accuracy: 92%
 
-1. **Integrate Real-Time GPS Data**  
-   Enhance prediction and delay analysis by incorporating live bus tracking data.
+F1 Score: 0.91
 
-2. **Add Passenger Load/Occupancy Data**  
-   Include ticketing or sensor data to analyze crowding and optimize routes.
+**4. Dashboard Development**
+Created an interactive Power BI dashboard showing:
+Route type distribution.
+Peak vs. off-peak utilization.
+Geographic route coverage.
+Efficiency KPIs.
 
-3. **Automate ETAs & Delay Prediction**  
-   Use weather, traffic, and historical data to predict expected delays.
+## Key Insights
+Express routes were underutilized during non-peak hours.
+Several Ordinary routes had high overlap, increasing operational costs.
+IT corridor routes had the highest weekday demand.
 
-4 **Feedback-Driven Optimization**  
-   Include user satisfaction scores to refine service quality.
+ ## Business Recommendations
+Reduce Express route frequency during off-peak hours to save costs.
+Merge overlapping Ordinary routes to optimize fleet usage.
+Increase service frequency for high-demand IT corridor routes.
 
-6. **App Development**  
-   Build a commuter-facing app or chatbot to query best routes and timings.
+
+## Impact
+Centralized dashboard for planners to monitor KPIs in real-time.
+Data-driven decisions to optimize schedules, reduce fuel consumption, and improve service coverage.
+Framework can be extended to real-time GTFS feeds for live route classification.
+
+## How to Run
+Clone the repository:
+git clone https://github.com/yourusername/BMTC-Bus-Route-Analysis-Prediction.git
+cd BMTC-Bus-Route-Analysis-Prediction
+Install dependencies:
+pip install -r requirements.txt
+Run preprocessing and model training:
+python bmtc_analysis.py
+Open the Power BI dashboard file: BMTC_Dashboard.pbix
+
+## Screenshots
+Power BI Dashboard
+<img width="1321" height="742" alt="image" src="https://github.com/user-attachments/assets/95398710-a29a-4fbe-84c3-8e90ba475192" />
+
+## Author
+Rimpa Das
+📧 rimpadas93828@gmail.com
+🔗 LinkedIn | GitHub
 
 
-## 📫 Contact
-Built by [Rimpa Das] – [(https://www.linkedin.com/in/rimpa-das-5a6905265/)]
